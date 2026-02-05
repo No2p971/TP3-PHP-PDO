@@ -10,7 +10,7 @@
 
 
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://getbootstrap.com/"> <!-- mauvais lien -->
+<link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css"> <!-- bon lien -->
 
 
     <style>
@@ -31,7 +31,7 @@
     </style>
 
     
-    <!-- Custom styles for this template -->
+    <!-- Personnalisation de template -->
     <link href="jumbotron.css" rel="stylesheet">
   </head>
   <body>
