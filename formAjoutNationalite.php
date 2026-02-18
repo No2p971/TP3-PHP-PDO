@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <div class="col"><a href="listeNationalites.php" class='btn btn-warning btn-block'>Revenir à la liste</a></div>
-            <div class="col"><button type='submit' class='btn btn-success btn-block'> Ajouter </button></div>
+            <div class="col"><button type='submit' class='btn btn-success btn-block'>Ajouter</button></div>
         </div>
     </form>
 </div>
