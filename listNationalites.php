@@ -32,19 +32,34 @@ $lesNationalites=$req->fetchAll();
         echo "<td class='col-md-8'>$nationalite->libelle</td>";
         echo "<td class='col-md-2'>
             <a href='formNationalite.php?action=modif&num=$nationalite->num' class='btn btn-primary'><i class='fas fa-pen'></i></a>
-            <a href='valideSupprNationalite.php?num=$nationalite->num' class='btn btn-danger' onclick=\"return confirm('Êtes-vous sûr de vouloir supprimer cette nationalité ?');\"><i class='far fa-trash-alt'></i></a>
+            <a href='#modalSuppression' data-toggle='modal' data-message='Voulez vous supprimer cette nationalité ?' data-supression='valideSupprNationalite.php?num=$nationalite->num' class='btn btn-danger' onclick=\"document.getElementById('supprNum').value = '$nationalite->num';\"><i class='far fa-trash-alt'></i></a>
         </td>";        
         echo "</tr>";
 
     }
+// valideSupprNationalite.php?num=$nationalite->num
     ?>
  
     </tbody>
     </table>
 
+</div>
+<div id="modalSuppression" class="modal fade" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">confirmation de suppresion</h5>
+            </div>
+            <div class="modal-body">
+                <p>Voulez vous supprimer cette nationalité ?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="btn btn-primary" id="btnSuppr">Supprimer</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">ne pas supprimer</button>
+            </div>
+        </div>
     </div>
-    </main>
+</div>
+<?php include "footer.php";
 
-    <?php include "footer.php";
-
-    ?>
+?>
